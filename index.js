@@ -1,7 +1,11 @@
 const listItems = document.querySelectorAll('li');
+const listItemsArray = [...listItems]
 
-addEventListener('click', (event) => {
-  event.preventDefault();
-  const target = event.target;
-  target.style.color = 'brown';
+listItems.forEach((li) => {
+  li.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = event.target;
+    target.style.color = 'brown';
+  });
+
 });
